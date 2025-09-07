@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom layer for glass + focus styles */
+@layer components {
+  .glass-panel {
+    @apply bg-white/70 dark:bg-neutral-900/60 border border-white/20 dark:border-white/10 backdrop-blur-md shadow-glass rounded-xl transition-colors duration-200;
+  }
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-neutral-900;
+  }
+}
+
+html, body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(100,100,120,0.35); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(100,100,120,0.55); }
