@@ -4,11 +4,11 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "node --max_old_space_size=1024 ./node_modules/typescript/lib/tsc.js && vite build",
+    "dev": "node ./node_modules/vite/bin/vite.js",
+    "build": "node --max_old_space_size=1024 ./node_modules/typescript/lib/tsc.js && node ./node_modules/vite/bin/vite.js build",
     "clean": "rimraf dist .tsbuildinfo || rd /s /q dist",
-    "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "preview": "node ./node_modules/vite/bin/vite.js preview",
+    "typecheck": "node ./node_modules/typescript/lib/tsc.js --noEmit"
   },
   "dependencies": {
     "@axe-core/react": "^4.10.2",
